@@ -1,7 +1,7 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FluxHeightWidthUtils {
-  static double defaultHorizontalPadding = 10.0.w;
+  static double defaultHorizontalPadding = 20.0.w;
   static double defaultVerticalPadding = 10.0.w;
   static double defaultBottomPadding = 10.0.w;
   static double defaultTopPadding = 10.0.w;

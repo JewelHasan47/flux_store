@@ -90,3 +90,23 @@ flutter:
         - asset: assets/fonts/google_sans/GoogleSans-MediumItalic.ttf
           style: italic
         - asset: assets/fonts/google_sans/GoogleSans-Regular.ttf
+    - family: Product Sans
+      fonts:
+        - asset: assets/fonts/product_sans/Product_Sans_Regular.ttf
+        - asset: assets/fonts/product_sans/Product_Sans_Black.ttf
+        - asset: assets/fonts/product_sans/Product_Sans_Black_Italic.ttf
+          style: italic
+        - asset: assets/fonts/product_sans/Product_Sans_Bold.ttf
+        - asset: assets/fonts/product_sans/Product_Sans_Bold_Italic.ttf
+          style: italic
+        - asset: assets/fonts/product_sans/Product_Sans_Italic.ttf
+          style: italic
+        - asset: assets/fonts/product_sans/Product_Sans_Light.ttf
+        - asset: assets/fonts/product_sans/Product_Sans_Light_Italic.ttf
+          style: italic
+        - asset: assets/fonts/product_sans/Product_Sans_Medium.ttf
+        - asset: assets/fonts/product_sans/Product_Sans_Medium_Italic.ttf
+          style: italic
+        - asset: assets/fonts/product_sans/Product_Sans_Thin.ttf
+        - asset: assets/fonts/product_sans/Product_Sans_Thin_Italic.ttf
+          style: italic

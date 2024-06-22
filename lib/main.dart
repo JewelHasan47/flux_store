@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flux_store/Configs/flux_store_configs.dart';
+import 'package:flux_store/Pages/Auth/sign_up_page.dart';
 import 'package:flux_store/Pages/HomeSlider/demo_slider.dart';
 import 'package:flux_store/Pages/HomeSlider/products.dart';
 import 'package:flux_store/Pages/SplashPage/splash_page.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const CarouselWithIndicatorDemo(),
+        home: const SignUpPage(),
       ),
     );
   }

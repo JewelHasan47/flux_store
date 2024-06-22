@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flux_store/Configs/flux_text_configs.dart';
+import 'package:flux_store/Utils/flux_colors.dart';
 
-class PrimaryButton extends StatelessWidget {
+class BlackButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String text;
 
-  const PrimaryButton({
+  const BlackButton({
     super.key,
     required this.onPressed,
     required this.text,
@@ -18,15 +19,7 @@ class PrimaryButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        backgroundColor: Colors.grey.shade600,
-        foregroundColor: Colors.black87,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25.0.r),
-          side: const BorderSide(
-            color: Colors.white,
-            width: 1.5,
-          ),
-        ),
+        backgroundColor: FluxColors.black,
         padding: EdgeInsets.symmetric(
           horizontal: 50.w,
           vertical: 15.h,
