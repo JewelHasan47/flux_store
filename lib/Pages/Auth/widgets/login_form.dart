@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flux_store/Configs/flux_text_configs.dart';
 import 'package:flux_store/Pages/Auth/widgets/sign_up_input.dart';
-import 'package:flux_store/Utils/flux_colors.dart';
+import 'package:flux_store/Utils/screen_configs.dart';
 
 class LogInForm extends StatefulWidget {
   const LogInForm({super.key});
@@ -12,8 +10,8 @@ class LogInForm extends StatefulWidget {
 }
 
 class _LogInFormState extends State<LogInForm> {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

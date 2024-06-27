@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flux_store/Commons/Buttons/black_button.dart';
 import 'package:flux_store/Configs/flux_text_configs.dart';
 import 'package:flux_store/Pages/Auth/log_in_page.dart';
 import 'package:flux_store/Pages/Auth/widgets/sign_up_form.dart';
 import 'package:flux_store/Utils/flux_colors.dart';
 import 'package:flux_store/Utils/flux_height_width_utils.dart';
+import 'package:flux_store/Utils/screen_configs.dart';
 
 class SignUpPage extends StatelessWidget {
   static Route<dynamic> navigateTo({required BuildContext context}) {

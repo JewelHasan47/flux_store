@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flux_store/Commons/Buttons/primary_button.dart';
 import 'package:flux_store/Configs/flux_text_configs.dart';
+import 'package:flux_store/Pages/Onboarding/onboarding_page.dart';
 import 'package:flux_store/Utils/flux_height_width_utils.dart';
 import 'package:flux_store/Utils/flux_store_images.dart';
+import 'package:flux_store/Utils/screen_configs.dart';
 
 class SplashPage extends StatelessWidget {
-  static navigateTo() {
-    MaterialPageRoute(
+  static Route<dynamic> navigateTo({required BuildContext context}) {
+    return MaterialPageRoute(
       builder: (context) => const SplashPage(),
     );
   }
@@ -64,7 +65,14 @@ class SplashPage extends StatelessWidget {
                   horizontal: FluxHeightWidthUtils.defaultHorizontalPadding,
                   vertical: FluxHeightWidthUtils.defaultVerticalPadding,
                 ),
-                child: PrimaryButton(onPressed: () {}, text: 'Get Started'),
+                child: PrimaryButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      OnboardingPage.navigateTo(context: context),
+                    );
+                  },
+                  text: 'Get Started',
+                ),
               ),
               SizedBox(
                 height: 80.0.h,
@@ -76,4 +84,3 @@ class SplashPage extends StatelessWidget {
     );
   }
 }
-

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flux_store/Configs/flux_text_configs.dart';
 import 'package:flux_store/Pages/Auth/widgets/sign_up_input.dart';
-import 'package:flux_store/Utils/flux_colors.dart';
+import 'package:flux_store/Utils/screen_configs.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -12,10 +10,10 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-  TextEditingController _nameController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
-  TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

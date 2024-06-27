@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flux_store/Configs/flux_text_configs.dart';
 import 'package:flux_store/Utils/flux_colors.dart';
+import 'package:flux_store/Utils/screen_configs.dart';
 
 class BlackButton extends StatelessWidget {
   final VoidCallback? onPressed;

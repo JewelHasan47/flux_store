@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flux_store/Commons/Buttons/black_button.dart';
 import 'package:flux_store/Configs/flux_text_configs.dart';
+import 'package:flux_store/Pages/Auth/forgot_password_page.dart';
 import 'package:flux_store/Pages/Auth/sign_up_page.dart';
 import 'package:flux_store/Pages/Auth/widgets/login_form.dart';
-import 'package:flux_store/Pages/Auth/widgets/sign_up_form.dart';
 import 'package:flux_store/Utils/flux_colors.dart';
 import 'package:flux_store/Utils/flux_height_width_utils.dart';
 import 'package:flux_store/Utils/flux_store_images.dart';
+import 'package:flux_store/Utils/screen_configs.dart';
 
 class LoginPage extends StatelessWidget {
   static Route<dynamic> navigateTo({required BuildContext context}) {
@@ -60,6 +60,27 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 20.h),
                   const LogInForm(),
                   SizedBox(height: 30.h),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          ForgotPasswordPage.navigateTo(context: context),
+                        );
+                      },
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          fontFamily: FluxTextConfigs.defaultFont,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w300,
+                          color: FluxColors.black.withOpacity(0.5),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 30.h),
                   Center(
                     child: BlackButton(
                       onPressed: () {},
@@ -69,7 +90,7 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 15.h),
                   Center(
                     child: Text(
-                      'Or sign up with',
+                      'Or log in with',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: FluxTextConfigs.defaultFont,
