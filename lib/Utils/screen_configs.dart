@@ -14,6 +14,7 @@ class ScreenConfigs {
     screenHeight = _mediaQueryData.size.height;
     designWidth = designSize.width;
     designHeight = designSize.height;
+    // ignore: deprecated_member_use
     textScaleFactor = _mediaQueryData.textScaleFactor;
   }
 
