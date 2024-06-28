@@ -86,7 +86,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             ),
             // Page indicator
             Positioned(
-              bottom: 100.h,
+              bottom: 120.h,
               left: 0.w,
               right: 0.w,
               child: Center(
@@ -111,8 +111,23 @@ class _OnboardingPageState extends State<OnboardingPage> {
               left: 0,
               right: 0,
               child: Center(
-                child: TextButton(
+                child: ElevatedButton(
                   onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    backgroundColor: Colors.black.withOpacity(0.25),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0.r),
+                      side: const BorderSide(
+                        color: Colors.white,
+                        width: 1.5,
+                      ),
+                    ),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 50.w,
+                      vertical: 15.h,
+                    ),
+                  ),
                   child: const Text(
                     'Shopping Now',
                     style: TextStyle(color: Colors.white),

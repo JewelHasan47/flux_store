@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flux_store/Configs/flux_text_configs.dart';
 import 'package:flux_store/Pages/Onboarding/widgets/image_card.dart';
+import 'package:flux_store/Utils/flux_colors.dart';
 import 'package:flux_store/Utils/screen_configs.dart';
 
 class OnboardingOne extends StatelessWidget {
@@ -23,10 +25,16 @@ class OnboardingOne extends StatelessWidget {
         Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               title,
+              style: TextStyle(
+                fontFamily: FluxTextConfigs.defaultFont,
+                fontSize: 16.sp,
+                fontWeight: FontWeight.bold,
+                color: FluxColors.black,
+              ),
             ),
             Text(
               subtitle,

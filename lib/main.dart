@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenConfigs.init(context);
+    double height = MediaQuery.sizeOf(context).height;
+    double width = MediaQuery.sizeOf(context).width;
+    ScreenConfigs.init(context, designSize: Size(width, height));
 
     return MaterialApp(
       title: FluxStoreConfigs.appName,

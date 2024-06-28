@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store/Pages/Onboarding/widgets/image_card.dart';
-import 'package:flux_store/Utils/screen_configs.dart';
 
 class OnboardingTwo extends StatelessWidget {
   final String title;
