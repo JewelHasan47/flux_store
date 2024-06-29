@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flux_store/Utils/screen_configs.dart';
 
 class VerificationCodePage extends StatefulWidget {
   static Route<dynamic> navigateTo({required BuildContext context}) {
@@ -15,6 +16,7 @@ class VerificationCodePage extends StatefulWidget {
 class _VerificationCodePageState extends State<VerificationCodePage> {
   @override
   Widget build(BuildContext context) {
+    ScreenConfigs.init(context);
     return const Placeholder();
   }
 }

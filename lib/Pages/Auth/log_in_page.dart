@@ -20,6 +20,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenConfigs.init(context);
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(

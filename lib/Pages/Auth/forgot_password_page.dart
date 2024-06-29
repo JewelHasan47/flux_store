@@ -20,6 +20,7 @@ class ForgotPasswordPage extends StatefulWidget {
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   @override
   Widget build(BuildContext context) {
+    ScreenConfigs.init(context);
     return Scaffold(
       appBar: const SimpleAppBar(),
       body: Container(

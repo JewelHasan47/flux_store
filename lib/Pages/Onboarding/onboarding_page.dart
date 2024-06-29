@@ -41,6 +41,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenConfigs.init(context);
     return Scaffold(
       body: SafeArea(
         child: Stack(

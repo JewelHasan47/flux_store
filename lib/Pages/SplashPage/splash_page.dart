@@ -17,6 +17,8 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenConfigs.init(context);
+
     return Stack(
       children: [
         Container(

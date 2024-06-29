@@ -6,57 +6,39 @@ class ScreenConfigs {
   static late double screenHeight;
   static late double designWidth;
   static late double designHeight;
-  static late double textScaleFactor;
+  static late TextScaler textScaler;
 
   static void init(BuildContext context, {Size designSize = const Size(375, 812)}) {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
-    designWidth = designSize.width;
-    designHeight = designSize.height;
-    // ignore: deprecated_member_use
-    textScaleFactor = _mediaQueryData.textScaleFactor;
+    designWidth = screenWidth != 0 ? screenWidth : designSize.width;
+    designHeight = screenHeight != 0 ? screenHeight : designSize.height;
+    textScaler = _mediaQueryData.textScaler;
   }
 
   static double sp(double size) {
-    double scale = screenWidth / designWidth;
-    return size * scale * textScaleFactor;
+    double scaleFactor = screenWidth / designWidth;
+    return textScaler.scale(size * scaleFactor);
   }
 
-  static double w(double size) {
-    return size * screenWidth / designWidth;
-  }
+  static double w(double size) => size * (screenWidth / designWidth);
 
-  static double h(double size) {
-    return size * screenHeight / designHeight;
-  }
+  static double h(double size) => size * (screenHeight / designHeight);
 
-  // Additional utility methods
-
-  static double get scaleWidth => screenWidth / designWidth;
-
-  static double get scaleHeight => screenHeight / designHeight;
-
-  static double setWidth(double width) => w(width);
-
-  static double setHeight(double height) => h(height);
-
-  static double radius(double r) => r * scaleWidth;
+  static double radius(double r) => r * (screenWidth / designWidth);
 
   static double setSp(double fontSize) => sp(fontSize);
 
-  // Shorthand for MediaQuery properties
-  static double get statusBarHeight => _mediaQueryData.padding.top;
+  static double statusBarHeight() => _mediaQueryData.padding.top;
 
-  static double get bottomBarHeight => _mediaQueryData.padding.bottom;
+  static double bottomBarHeight() => _mediaQueryData.padding.bottom;
 
-  // Orientation helper
-  static bool get isPortrait => _mediaQueryData.orientation == Orientation.portrait;
+  static bool isPortrait() => _mediaQueryData.orientation == Orientation.portrait;
 
-  static bool get isLandscape => _mediaQueryData.orientation == Orientation.landscape;
+  static bool isLandscape() => _mediaQueryData.orientation == Orientation.landscape;
 }
 
-// Extension methods for easier usage
 extension SizeExtension on num {
   double get w => ScreenConfigs.w(toDouble());
 
